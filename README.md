@@ -1,5 +1,5 @@
 # TP-POO
-Mariana Souza - 3898, 
+Mariana Souza - 3898,  
 Mateus Aparecido - 3858
 
 # Ideia inicial do projeto 
@@ -24,4 +24,5 @@ Mateus Aparecido - 3858
 
 
 # Ferramentas 
+- Linguagem: Java
 - Banco de dados: SQLite
