@@ -4,6 +4,8 @@ public class ModelAluno {
     private String alunoNome;
     private String alunoLogin;
     private String alunoSenha;
+    private String alunoAno;
+    private String alunoEmail;
 
     /**
      * @return the alunoId
@@ -59,5 +61,33 @@ public class ModelAluno {
      */
     public void setAlunoSenha(String alunoSenha) {
         this.alunoSenha = alunoSenha;
+    }
+
+    /**
+     * @return the alunoAno
+     */
+    public String getAlunoAno() {
+        return alunoAno;
+    }
+
+    /**
+     * @param alunoAno the alunoAno to set
+     */
+    public void setAlunoAno(String alunoAno) {
+        this.alunoAno = alunoAno;
+    }
+
+    /**
+     * @return the alunoEmail
+     */
+    public String getAlunoEmail() {
+        return alunoEmail;
+    }
+
+    /**
+     * @param alunoEmail the alunoEmail to set
+     */
+    public void setAlunoEmail(String alunoEmail) {
+        this.alunoEmail = alunoEmail;
     }
 }

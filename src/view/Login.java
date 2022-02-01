@@ -28,6 +28,8 @@ public class Login extends javax.swing.JFrame {
         setTitle("área de login");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setAutoscrolls(true);
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Senha:");
@@ -58,7 +60,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem-Login.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/imagem-Login.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,19 +79,18 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(txtlogin)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(262, 262, 262)
-                        .addComponent(BTlogar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 106, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(97, 97, 97))
+                        .addComponent(BTlogar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59)
-                .addComponent(jLabel3)
-                .addGap(74, 74, 74)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -99,7 +100,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(BTlogar)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -122,32 +123,30 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtloginActionPerformed
+    //Função para comparar as variáveis do login e senha (Botão de Entrar)
+    private void BTlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTlogarActionPerformed
+
+        if(txtlogin.getText().equals("Marcia")&& txtSenha.getText().equals("123#")){
+            UsuarioComum materia = new UsuarioComum ();
+            materia.setVisible(true);
+
+            dispose ();
+
+        }else{
+            JOptionPane.showMessageDialog(null,"Login não ocorreu bem!" );
+
+        }
+    }//GEN-LAST:event_BTlogarActionPerformed
 
     private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
 
+    private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtloginActionPerformed
+
     
-    //Função para comparar as variáveis do login e senha (Botão de Entrar)
-    private void BTlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTlogarActionPerformed
-        
-        if(txtlogin.getText().equals("Marcia")&& txtSenha.getText().equals("123#")){
-            UsuarioComum materia = new UsuarioComum ();
-                materia.setVisible(true);
-                
-                dispose ();
-                    
-                    
-        }else{
-            JOptionPane.showMessageDialog(null,"Login não ocorreu bem!" );
-
-        }
-        
-    }//GEN-LAST:event_BTlogarActionPerformed
-
     /**
      * @param args the command line arguments
      */
