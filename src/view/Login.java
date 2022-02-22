@@ -1,7 +1,17 @@
 package view;
+import controller.ControlAluno;
+import controller.ControlProfessor;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
+import model.ModelAluno;
+import model.ModelProfessor;
 public class Login extends javax.swing.JFrame {
-
+ModelAluno modelAluno= new ModelAluno();
+ModelProfessor modelProfessor = new ModelProfessor();
+ControlAluno controlAluno = new ControlAluno();
+ControlProfessor controlProfessor = new ControlProfessor();
+List<ModelAluno> listaAluno = new ArrayList<>();
     public Login() {
         initComponents();
     }
@@ -20,9 +30,9 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtlogin = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JTextField();
         BTlogar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        txtSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("área de login");
@@ -41,13 +51,6 @@ public class Login extends javax.swing.JFrame {
         txtlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtloginActionPerformed(evt);
-            }
-        });
-
-        txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSenhaActionPerformed(evt);
             }
         });
 
@@ -75,8 +78,8 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                            .addComponent(txtlogin)))
+                            .addComponent(txtlogin, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                            .addComponent(txtSenha)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(262, 262, 262)
                         .addComponent(BTlogar))
@@ -96,8 +99,8 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(txtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(BTlogar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -125,22 +128,23 @@ public class Login extends javax.swing.JFrame {
 
     //Função para comparar as variáveis do login e senha (Botão de Entrar)
     private void BTlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTlogarActionPerformed
-
-        if(txtlogin.getText().equals("Marcia")&& txtSenha.getText().equals("123#")){
-            UsuarioComum materia = new UsuarioComum ();
-            materia.setVisible(true);
-
-            dispose ();
-
-        }else{
-            JOptionPane.showMessageDialog(null,"Login não ocorreu bem!" );
-
+        modelAluno.setAlunoLogin(txtlogin.getText());
+        modelAluno.setAlunoSenha(String.valueOf(txtSenha.getPassword()));
+        modelProfessor.setProfLogin(txtlogin.getText());
+        modelProfessor.setProfSenha(String.valueOf(txtSenha.getPassword()));
+        if(controlAluno.validarAlunoControl(modelAluno)){
+          new UsuarioComum().setVisible(true);
+          dispose ();
+        }else if(controlProfessor.validarProfControl(modelProfessor)){
+          new TelaProfessor().setVisible(true);
+          dispose ();
         }
+        else{
+        JOptionPane.showMessageDialog(null,"Usuário ou senha incorretos");
+        }
+      
+        
     }//GEN-LAST:event_BTlogarActionPerformed
-
-    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
         // TODO add your handling code here:
@@ -188,7 +192,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtSenha;
+    private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTextField txtlogin;
     // End of variables declaration//GEN-END:variables
 }

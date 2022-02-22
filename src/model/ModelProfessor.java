@@ -1,9 +1,24 @@
 package model;
 public class ModelProfessor {
+
+    /**
+     * @return the profEmail
+     */
+    public String getProfEmail() {
+        return profEmail;
+    }
+
+    /**
+     * @param profEmail the profEmail to set
+     */
+    public void setProfEmail(String profEmail) {
+        this.profEmail = profEmail;
+    }
     private int profId;
     private String profNome;
     private String profLogin;
     private String profSenha;
+    private String profEmail;
     public int getProfId() {
         return profId;
     }

@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/poogrupo/PooGrupo.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/CadastroProfessor.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/DAO/DAOProfessor.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/TelaAdmin.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/Programacao.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/model/ModelAluno.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/Login.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/TelaProfessor.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/CadastroAluno.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/DAO/DAOAluno.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/util/ConexaoSQLite.java</file>
+            <file>file:/C:/Users/mateu/Downloads/TP-POO-main%20(1)/TP-POO-main/src/view/EditorMaterias.java</file>
+        </group>
     </open-files>
 </project-private>
