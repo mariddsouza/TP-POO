@@ -17,7 +17,6 @@ public class TelaAdmin extends javax.swing.JFrame {
         ButtonProgramacao = new javax.swing.JButton();
         ButtonVoltar = new javax.swing.JButton();
         ButtonGrafos = new javax.swing.JButton();
-        ButtonAeds = new javax.swing.JButton();
         ButtonCadastrar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
@@ -36,7 +35,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         TitleMateria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TitleMateria.setText("Matérias");
         jPanel1.add(TitleMateria);
-        TitleMateria.setBounds(270, 0, 210, 70);
+        TitleMateria.setBounds(270, 10, 210, 70);
 
         ButtonProgramacao.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         ButtonProgramacao.setText("Programação");
@@ -46,7 +45,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ButtonProgramacao);
-        ButtonProgramacao.setBounds(20, 280, 350, 41);
+        ButtonProgramacao.setBounds(10, 280, 350, 41);
 
         ButtonVoltar.setText("Voltar");
         ButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -65,17 +64,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ButtonGrafos);
-        ButtonGrafos.setBounds(390, 280, 350, 40);
-
-        ButtonAeds.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        ButtonAeds.setText("Algoritmos e Estruturas de Dados I");
-        ButtonAeds.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonAedsActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ButtonAeds);
-        ButtonAeds.setBounds(190, 360, 350, 50);
+        ButtonGrafos.setBounds(380, 280, 350, 40);
 
         ButtonCadastrar.setText("Cadastrar");
         ButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -84,12 +73,12 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ButtonCadastrar);
-        ButtonCadastrar.setBounds(330, 460, 100, 30);
+        ButtonCadastrar.setBounds(270, 460, 160, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/Background-image.png"))); // NOI18N
         jLabel3.setText("jLabel3");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(-20, -30, 770, 600);
+        jLabel3.setBounds(-30, -20, 780, 590);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,17 +106,18 @@ public class TelaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonVoltarActionPerformed
 
     private void ButtonProgramacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonProgramacaoActionPerformed
-        TelaProgramacao prog = new TelaProgramacao ();
+        TelaProgAdmin prog = new TelaProgAdmin ();
         prog.setVisible(true);
 
         dispose ();
     }//GEN-LAST:event_ButtonProgramacaoActionPerformed
 
     private void ButtonGrafosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonGrafosActionPerformed
-    }//GEN-LAST:event_ButtonGrafosActionPerformed
+        TelaGrafosAdmin grafos = new TelaGrafosAdmin ();
+        grafos.setVisible(true);
 
-    private void ButtonAedsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAedsActionPerformed
-    }//GEN-LAST:event_ButtonAedsActionPerformed
+        dispose ();
+    }//GEN-LAST:event_ButtonGrafosActionPerformed
 
     private void ButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarActionPerformed
         TelaCadastrar cadastrar = new TelaCadastrar ();
@@ -145,7 +135,6 @@ public class TelaAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonAeds;
     private javax.swing.JButton ButtonCadastrar;
     private javax.swing.JButton ButtonGrafos;
     private javax.swing.JButton ButtonProgramacao;

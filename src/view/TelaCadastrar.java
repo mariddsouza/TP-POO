@@ -116,7 +116,7 @@ public class TelaCadastrar extends javax.swing.JFrame {
         BackgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/Background-image.png"))); // NOI18N
         BackgroundImage.setText("jLabel5");
         jPanel1.add(BackgroundImage);
-        BackgroundImage.setBounds(0, 0, 820, 610);
+        BackgroundImage.setBounds(0, 0, 810, 610);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
