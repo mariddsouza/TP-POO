@@ -18,6 +18,7 @@ public class TelaInicial extends javax.swing.JFrame {
     
     public TelaInicial() {
         initComponents();
+        setLocationRelativeTo(null);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

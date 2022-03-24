@@ -6,6 +6,8 @@ public class TelaProgAdmin extends javax.swing.JFrame {
 
     public TelaProgAdmin() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -132,7 +134,10 @@ public class TelaProgAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_LinkMatrizActionPerformed
 
     private void ButtonInserirConteudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonInserirConteudoActionPerformed
-        //inseir o conteudo de programação aqui 
+         TelaInserirConteudo conteudo = new TelaInserirConteudo ();
+        conteudo.setVisible(true);
+
+        dispose ();
     }//GEN-LAST:event_ButtonInserirConteudoActionPerformed
 
     public static void main(String args[]) {

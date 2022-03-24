@@ -8,6 +8,8 @@ public class TelaGrafosAdmin extends javax.swing.JFrame {
 
     public TelaGrafosAdmin() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

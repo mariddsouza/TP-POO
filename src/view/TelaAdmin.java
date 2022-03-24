@@ -4,6 +4,8 @@ public class TelaAdmin extends javax.swing.JFrame {
 
     public TelaAdmin() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

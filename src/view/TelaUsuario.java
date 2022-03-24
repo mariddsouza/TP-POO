@@ -1,9 +1,25 @@
 package view;
 
-public class TelaUsuario extends javax.swing.JFrame {
+import java.awt.geom.RoundRectangle2D;
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.border.BevelBorder;
 
+public class TelaUsuario extends javax.swing.JFrame {
+    int positionX = 0, positionY = 0;
+    
     public TelaUsuario() {
+        
+        //setUndecorated(true);
+        
+        
         initComponents();
+        
+        
+        
+        setLocationRelativeTo(null);
+        
+        //setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), 50, 80));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -84,7 +100,8 @@ public class TelaUsuario extends javax.swing.JFrame {
 
         dispose ();
     }//GEN-LAST:event_ButtonGrafosActionPerformed
-
+        
+  
     private void ButtonProgramacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonProgramacaoActionPerformed
         TelaProgramacao prog = new TelaProgramacao ();
         prog.setVisible(true);

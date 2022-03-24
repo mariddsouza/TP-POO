@@ -4,6 +4,8 @@ public class TelaCadastrar extends javax.swing.JFrame {
 
     public TelaCadastrar() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -48,7 +50,7 @@ public class TelaCadastrar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(textName);
-        textName.setBounds(330, 210, 240, 50);
+        textName.setBounds(330, 220, 240, 40);
 
         TitleCadastrar.setFont(new java.awt.Font("Franklin Gothic Book", 1, 36)); // NOI18N
         TitleCadastrar.setText("Cadastrar");
@@ -66,7 +68,7 @@ public class TelaCadastrar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(textLogin);
-        textLogin.setBounds(240, 280, 240, 50);
+        textLogin.setBounds(240, 280, 240, 40);
 
         ButtonEnviar.setText("Enviar");
         ButtonEnviar.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +85,7 @@ public class TelaCadastrar extends javax.swing.JFrame {
             }
         });
         jPanel1.add(textEmail);
-        textEmail.setBounds(140, 350, 240, 50);
+        textEmail.setBounds(140, 350, 240, 40);
 
         CheckBoxAdmin.setText("Cadastrar Administrador");
         CheckBoxAdmin.addActionListener(new java.awt.event.ActionListener() {

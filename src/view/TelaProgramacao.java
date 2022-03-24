@@ -6,6 +6,8 @@ public class TelaProgramacao extends javax.swing.JFrame {
 
     public TelaProgramacao() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

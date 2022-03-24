@@ -8,6 +8,8 @@ public class TelaGrafos extends javax.swing.JFrame {
 
     public TelaGrafos() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
