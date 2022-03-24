@@ -27,9 +27,9 @@ public class TelaInicial extends javax.swing.JFrame {
         ButtonSingin = new javax.swing.JButton();
         ButtonLogin = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        ButtonLogin1 = new javax.swing.JTextField();
+        textLogin = new javax.swing.JTextField();
         TextLogin = new javax.swing.JLabel();
-        ButtonPassword = new javax.swing.JPasswordField();
+        TextSenha = new javax.swing.JPasswordField();
         TextPassword = new javax.swing.JLabel();
         ButtonSingin1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -59,24 +59,29 @@ public class TelaInicial extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 255, 204));
         jPanel3.setLayout(null);
 
-        ButtonLogin1.setBackground(new java.awt.Color(204, 204, 204));
-        ButtonLogin1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        ButtonLogin1.addActionListener(new java.awt.event.ActionListener() {
+        textLogin.setBackground(new java.awt.Color(204, 204, 204));
+        textLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        textLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonLogin1ActionPerformed(evt);
+                textLoginActionPerformed(evt);
             }
         });
-        jPanel3.add(ButtonLogin1);
-        ButtonLogin1.setBounds(20, 150, 210, 31);
+        jPanel3.add(textLogin);
+        textLogin.setBounds(20, 150, 210, 31);
 
         TextLogin.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         TextLogin.setText("Login");
         jPanel3.add(TextLogin);
         TextLogin.setBounds(20, 120, 60, 23);
 
-        ButtonPassword.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel3.add(ButtonPassword);
-        ButtonPassword.setBounds(20, 230, 210, 33);
+        TextSenha.setBackground(new java.awt.Color(204, 204, 204));
+        TextSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextSenhaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(TextSenha);
+        TextSenha.setBounds(20, 230, 210, 33);
 
         TextPassword.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         TextPassword.setText("Senha");
@@ -124,32 +129,15 @@ public class TelaInicial extends javax.swing.JFrame {
 
     private void ButtonSinginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSinginActionPerformed
 
-        modelAluno.setAlunoLogin(ButtonLogin.getText());
-        modelAluno.setAlunoSenha(String.valueOf(ButtonPassword.getPassword()));
-        modelProfessor.setProfLogin(ButtonLogin.getText());
-        modelProfessor.setProfSenha(String.valueOf(ButtonPassword.getPassword()));
-
-        if(controlAluno.validarAlunoControl(modelAluno)){
-            new TelaUsuario().setVisible(true);
-            dispose ();
-
-        }else if(controlProfessor.validarProfControl(modelProfessor)){
-            new TelaAdmin().setVisible(true);
-            dispose ();
-
-        }
-        else{
-            JOptionPane.showMessageDialog(null,"Usuário ou senha incorretos");
-        }
     }//GEN-LAST:event_ButtonSinginActionPerformed
 
-    private void ButtonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLogin1ActionPerformed
+    private void textLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textLoginActionPerformed
 
-    }//GEN-LAST:event_ButtonLogin1ActionPerformed
+    }//GEN-LAST:event_textLoginActionPerformed
 
     private void ButtonSingin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSingin1ActionPerformed
 
-        modelAluno.setAlunoLogin(ButtonLogin.getText());
+       /* modelAluno.setAlunoLogin(ButtonLogin.getText());
         modelAluno.setAlunoSenha(String.valueOf(ButtonPassword.getPassword()));
         modelProfessor.setProfLogin(ButtonLogin.getText());
         modelProfessor.setProfSenha(String.valueOf(ButtonPassword.getPassword()));
@@ -162,11 +150,20 @@ public class TelaInicial extends javax.swing.JFrame {
             new TelaAdmin().setVisible(true);
             dispose ();
 
-        }
+        }*/
+       if(textLogin.getText().equals("Marcia")&&TextSenha.getText().equals("1234")){
+           JOptionPane.showMessageDialog(null,"Bem vindo ao iCode");
+           new TelaUsuario().setVisible(true);
+            dispose ();
+       }
         else{
             JOptionPane.showMessageDialog(null,"Usuário ou senha incorretos");
         }
     }//GEN-LAST:event_ButtonSingin1ActionPerformed
+
+    private void TextSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextSenhaActionPerformed
 
     public static void main(String args[]) {
       
@@ -179,14 +176,14 @@ public class TelaInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ButtonLogin;
-    private javax.swing.JTextField ButtonLogin1;
-    private javax.swing.JPasswordField ButtonPassword;
     private javax.swing.JButton ButtonSingin;
     private javax.swing.JButton ButtonSingin1;
     private javax.swing.JLabel TextLogin;
     private javax.swing.JLabel TextPassword;
+    private javax.swing.JPasswordField TextSenha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField textLogin;
     // End of variables declaration//GEN-END:variables
 }

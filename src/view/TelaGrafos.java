@@ -19,6 +19,8 @@ public class TelaGrafos extends javax.swing.JFrame {
         TitleProgramacao = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         Link = new javax.swing.JButton();
+        Link1 = new javax.swing.JButton();
+        Link2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/Background-image.png"))); // NOI18N
@@ -43,14 +45,32 @@ public class TelaGrafos extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(720, 80, 70, 20);
 
-        Link.setText("Link");
+        Link.setText("Planaridade");
         Link.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LinkActionPerformed(evt);
             }
         });
         jPanel1.add(Link);
-        Link.setBounds(230, 270, 358, 25);
+        Link.setBounds(230, 370, 358, 25);
+
+        Link1.setText("Busca em Profundidade");
+        Link1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Link1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Link1);
+        Link1.setBounds(230, 270, 358, 25);
+
+        Link2.setText("Grafos Eulerianos");
+        Link2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Link2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Link2);
+        Link2.setBounds(230, 320, 358, 25);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/Background-image.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -86,11 +106,27 @@ public class TelaGrafos extends javax.swing.JFrame {
 
     private void LinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LinkActionPerformed
         try{
-            Desktop.getDesktop().browse(new URL("http://www.google.com").toURI());
+            Desktop.getDesktop().browse(new URL("http://www.gpec.ucdb.br/pistori/disciplinas/discreta/aulas/planaridade.htm").toURI());
         }
         catch(Exception e)
         {}
     }//GEN-LAST:event_LinkActionPerformed
+
+    private void Link1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Link1ActionPerformed
+          try{
+            Desktop.getDesktop().browse(new URL("https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/dfs.html").toURI());
+        }
+        catch(Exception e)
+        {}
+    }//GEN-LAST:event_Link1ActionPerformed
+
+    private void Link2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Link2ActionPerformed
+         try{
+            Desktop.getDesktop().browse(new URL("https://www.inf.ufsc.br/grafos/temas/euleriano/euleriano.htm").toURI());
+        }
+        catch(Exception e)
+        {}
+    }//GEN-LAST:event_Link2ActionPerformed
 
     public static void main(String args[]) {
       
@@ -103,6 +139,8 @@ public class TelaGrafos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Link;
+    private javax.swing.JButton Link1;
+    private javax.swing.JButton Link2;
     private javax.swing.JLabel TitleProgramacao;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

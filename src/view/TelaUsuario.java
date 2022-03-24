@@ -13,8 +13,7 @@ public class TelaUsuario extends javax.swing.JFrame {
         TitleMateria = new javax.swing.JLabel();
         ButtonGrafos = new javax.swing.JButton();
         ButtonProgramacao = new javax.swing.JButton();
-        ButtonAeds = new javax.swing.JButton();
-        ButtonVoltar = new java.awt.Button();
+        ButtonVoltar = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -26,9 +25,9 @@ public class TelaUsuario extends javax.swing.JFrame {
         TitleMateria.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         TitleMateria.setForeground(new java.awt.Color(51, 51, 51));
         TitleMateria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TitleMateria.setText("Matérias");
+        TitleMateria.setText("Disciplinas");
         jPanel1.add(TitleMateria);
-        TitleMateria.setBounds(310, 40, 210, 70);
+        TitleMateria.setBounds(300, 40, 270, 70);
 
         ButtonGrafos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         ButtonGrafos.setText("Teoria e Modelo de Grafos");
@@ -50,24 +49,14 @@ public class TelaUsuario extends javax.swing.JFrame {
         jPanel1.add(ButtonProgramacao);
         ButtonProgramacao.setBounds(40, 290, 350, 41);
 
-        ButtonAeds.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        ButtonAeds.setText("Algoritmos e Estruturas de Dados I");
-        ButtonAeds.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonAedsActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ButtonAeds);
-        ButtonAeds.setBounds(190, 390, 350, 50);
-
-        ButtonVoltar.setLabel("Voltar");
+        ButtonVoltar.setText("Voltar");
         ButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonVoltarActionPerformed(evt);
             }
         });
         jPanel1.add(ButtonVoltar);
-        ButtonVoltar.setBounds(730, 70, 80, 24);
+        ButtonVoltar.setBounds(720, 70, 90, 25);
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/Background-image.png"))); // NOI18N
         Background.setText("jLabel1");
@@ -96,9 +85,6 @@ public class TelaUsuario extends javax.swing.JFrame {
         dispose ();
     }//GEN-LAST:event_ButtonGrafosActionPerformed
 
-    private void ButtonAedsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAedsActionPerformed
-    }//GEN-LAST:event_ButtonAedsActionPerformed
-
     private void ButtonProgramacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonProgramacaoActionPerformed
         TelaProgramacao prog = new TelaProgramacao ();
         prog.setVisible(true);
@@ -106,7 +92,6 @@ public class TelaUsuario extends javax.swing.JFrame {
         dispose ();
     }//GEN-LAST:event_ButtonProgramacaoActionPerformed
 
-    //Botão de voltar
     private void ButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVoltarActionPerformed
        TelaInicial inicial = new TelaInicial ();
        inicial.setVisible(true);
@@ -123,10 +108,9 @@ public class TelaUsuario extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton ButtonAeds;
     private javax.swing.JButton ButtonGrafos;
     private javax.swing.JButton ButtonProgramacao;
-    private java.awt.Button ButtonVoltar;
+    private javax.swing.JButton ButtonVoltar;
     private javax.swing.JLabel TitleMateria;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

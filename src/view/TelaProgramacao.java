@@ -19,8 +19,10 @@ public class TelaProgramacao extends javax.swing.JFrame {
         jCheckBoxMenuItem4 = new javax.swing.JCheckBoxMenuItem();
         jPanel1 = new javax.swing.JPanel();
         TitleProgramacao = new javax.swing.JLabel();
-        Link = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        ButtonVoltar = new javax.swing.JButton();
+        linkArray = new javax.swing.JButton();
+        linkCondicional = new javax.swing.JButton();
+        LinkMatriz = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         jCheckBoxMenuItem1.setSelected(true);
@@ -45,23 +47,41 @@ public class TelaProgramacao extends javax.swing.JFrame {
         jPanel1.add(TitleProgramacao);
         TitleProgramacao.setBounds(310, 80, 215, 41);
 
-        Link.setText("Link");
-        Link.addActionListener(new java.awt.event.ActionListener() {
+        ButtonVoltar.setText("Voltar");
+        ButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LinkActionPerformed(evt);
+                ButtonVoltarActionPerformed(evt);
             }
         });
-        jPanel1.add(Link);
-        Link.setBounds(230, 270, 358, 25);
+        jPanel1.add(ButtonVoltar);
+        ButtonVoltar.setBounds(740, 100, 70, 20);
 
-        jButton1.setText("Voltar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        linkArray.setText("Array");
+        linkArray.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                linkArrayActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(740, 100, 70, 20);
+        jPanel1.add(linkArray);
+        linkArray.setBounds(230, 330, 358, 25);
+
+        linkCondicional.setText("Condicional");
+        linkCondicional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                linkCondicionalActionPerformed(evt);
+            }
+        });
+        jPanel1.add(linkCondicional);
+        linkCondicional.setBounds(230, 290, 358, 25);
+
+        LinkMatriz.setText("Matriz");
+        LinkMatriz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LinkMatrizActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LinkMatriz);
+        LinkMatriz.setBounds(230, 370, 358, 25);
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/Background-image.png"))); // NOI18N
         Background.setText("jLabel2");
@@ -82,20 +102,38 @@ public class TelaProgramacao extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LinkActionPerformed
-        try{
-            Desktop.getDesktop().browse(new URL("http://www.google.com").toURI());
-        }
-        catch(Exception e)
-        {}
-    }//GEN-LAST:event_LinkActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    //Voltando para a Tela de disciplinas do Usuario
+    private void ButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonVoltarActionPerformed
        TelaUsuario user = new TelaUsuario ();
        user.setVisible(true);
        
        dispose ();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonVoltarActionPerformed
+
+    private void linkArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_linkArrayActionPerformed
+
+        try{
+            Desktop.getDesktop().browse(new URL("http://linguagemc.com.br/vetores-ou-arrays-em-linguagem-c/").toURI());
+        }
+        catch(Exception e)
+        {}
+    }//GEN-LAST:event_linkArrayActionPerformed
+
+    private void linkCondicionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_linkCondicionalActionPerformed
+         try{
+            Desktop.getDesktop().browse(new URL("https://www.ic.unicamp.br/~wainer/cursos/2s2011/Cap05-EstruturasCondicionais-texto.pdf").toURI());
+        }
+        catch(Exception e)
+        {}
+    }//GEN-LAST:event_linkCondicionalActionPerformed
+
+    private void LinkMatrizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LinkMatrizActionPerformed
+        try{
+            Desktop.getDesktop().browse(new URL("http://linguagemc.com.br/matriz-em-c/").toURI());
+        }
+        catch(Exception e)
+        {}
+    }//GEN-LAST:event_LinkMatrizActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -106,14 +144,16 @@ public class TelaProgramacao extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton Link;
+    private javax.swing.JButton ButtonVoltar;
+    private javax.swing.JButton LinkMatriz;
     private javax.swing.JLabel TitleProgramacao;
-    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton linkArray;
+    private javax.swing.JButton linkCondicional;
     // End of variables declaration//GEN-END:variables
 }
