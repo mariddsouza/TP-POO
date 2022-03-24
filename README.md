@@ -1,28 +1,21 @@
-# TP-POO
-Mariana Souza - 3898,  
+# iCode
+Projeto desenvolvido para a disciplina de Programação Orientada a Objetos do curso de Ciência da Computação da Universidade Federal de Viçosa, desenvolvido pelos alunos:
 Mateus Aparecido - 3858
+Mariana Souza - 3898 
 
-# Ideia inicial do projeto 
-- Realizar um aplicativo com informações para os estudantes sobre as matérias.
+# Projeto
+O projeto tem como objetivo realizar a aplicação iCode que busca auxiliar os estudantes a filtrar os conteúdos para cada disciplina contida no curso de Ciência da Computação, dessa forma a aplicação tem a opção de escolher a disciplina que deseja visualizar os conteúdos, além de conter o modo administrador, onde é tem opções para cadastrar novos estudantes e administradores e novos conteúdos em cada matéria. 
 
-# Tela de Login 
-- A tela de login irá liberar o acesso se o estudante estiver com o e-mail da UFV (acesso para leitura)
-- Libera o acesso se for identificado como uma permissão de administrador (acesso para leitura e edição)
+# Esquema de Telas 
+Abaixo é apresentado o esquema de telas que foi utilizado para realização do projeto. 
+--Inserir esquemas
 
-# Administrador Geral
-- Controle geral do App
 
-# Administrador
-- Cadastrar alunos 
-- Inserir matérias 
-- Adicionar novas matérias
-- Apenas o responsável pela matéria poderá adicionar conteúdos
-
-# Usuário comum 
-- Acesso de leitura a todo conteúdo e matéria disponibilizado
-- Baixar os conteúdos
+# Tabela de Dados
 
 
 # Ferramentas 
 - Linguagem: Java
+- IDE: Apache NetBeans
+- Interface: Jframe
 - Banco de dados: SQLite
