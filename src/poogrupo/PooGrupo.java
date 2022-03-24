@@ -1,9 +1,9 @@
 
 package poogrupo;
-import view.Login;
+import view.TelaInicial;
 public class PooGrupo {
     public static void main(String[] args) {
-        new Login().setVisible(true);
+        new TelaInicial().setVisible(true);
             
     }
     
